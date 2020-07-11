@@ -234,13 +234,22 @@ h3 , .cat {
       bottom: 14px;
       background-color: #353b48;
     }
+    section{
+      padding-left: 0;
+      padding-right: 0;
+    }
     @media screen and (max-width: 700px) {
       #cv {
         display: block;
         margin: auto;
       }
       .interest{
+          
           width: 100%;
+      }
+      section{
+        padding-left:0;
+        padding-right: 0;
       }
       
     }
