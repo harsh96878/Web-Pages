@@ -150,8 +150,7 @@ section{
 }
 
 #nameBox, #emailBox {
-    
-    max-width: calc(50% - 20px);
+  width: calc(50% - 20px);
 }
 #messageBox {
     min-height:150px ;
@@ -193,7 +192,9 @@ section{
   .menu-toggler{
     display: block;
   }
-
+  .navbar{
+    padding: 20px 0;
+  }
   .navbar-menu{
     position: fixed;
     height: 100vh;
@@ -250,10 +251,16 @@ section{
     padding: 0 20px;
   }
   .contact-boxes .item {
-    
     width: 100%;
   }
+  #nameBox, #emailBox{
+    
+    width: 100%;
 
+  }
+  .navbar {
+    padding : 15px 0;
+  }
   
 }
 
