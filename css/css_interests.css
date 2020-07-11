@@ -207,7 +207,9 @@ h3 , .cat {
       transition: .3s linear;
       
     }
-  
+    .navbar {
+      padding : 20px 0;
+    }
     .navbar-menu a{
       color:#353b48;
       display: block;
@@ -242,6 +244,9 @@ h3 , .cat {
       #cv {
         display: block;
         margin: auto;
+      }
+      .navbar {
+        padding : 15px 0;
       }
       .interest{
           
