@@ -1,0 +1,250 @@
+  *{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Ubuntu",sans-serif;
+  box-sizing: border-box;
+
+}
+
+.navbar{
+  position: fixed;
+  background-color:white;
+  width: 100%;
+  padding: 30px 0;
+  top: 0;
+  z-index: 999;
+  transition: .3s linear; 
+}
+
+.inner-width{
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 30px;
+}
+
+.navbar .inner-width{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo{
+  width: 40px;
+  height: 30px;
+  background-image: url(../images/wh-logo.jpg);
+  background-size: contain;
+}
+
+.menu-toggler{
+  background: none;
+  width: 30px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  z-index: 999;
+  display: none;
+}
+
+.menu-toggler span{
+  display: block;
+  height: 3px;
+  background-color:#353b48;
+  margin: 6px 0;
+  position: relative;
+  transition: .3s linear;
+}
+
+.navbar-menu a{
+  color: #353b48;
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 30px;
+  transition: .2s linear;
+}
+
+.navbar-menu a:hover{
+  color: #48dbfb !important;
+}
+
+section{
+  padding: 100px 100px 50px 100px;
+  background-color: #353b48;
+ 
+}
+
+.section-title{
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  font-size: 26px;
+  padding-bottom: 10px;
+  
+}
+
+.section-title::before{
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 3px;
+  background-color: white;
+  bottom: 0;
+  left: calc(50% - 60px);
+}
+
+.section-title::after{
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 10px;
+  background-color: #48dbfb;
+  border: 4px solid #353b48;
+  left: calc(50% - 12px);
+  bottom: -7px;
+}
+
+
+.interests {
+    padding-top: 0;
+    margin : 5%;
+    
+    margin-top: 0;
+    top:0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.interest {
+    top:0;
+    width: calc(33% - 10px);
+    overflow: hidden;
+    border-radius: 6px;
+    margin: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.interest img {
+    width: 100%;
+    height: 100%;
+    transition: .4s linear;
+}
+
+.interest::before {
+    content: "";
+    position: absolute;
+    width: 100% ;
+    height: 100%;
+    z-index: 1;
+    background-color: #48dbfbcc;
+    transition: .2s linear;
+    opacity: 0;
+    transform:scale(0);
+}
+.interest .info {
+    position: absolute;
+    z-index: 2;
+    bottom: 10px;
+    left: 20px;
+    color: white;
+    transition: .4s linear;
+    opacity: 0;
+}
+
+.interest:hover img , .interest:active img{
+   
+    transform:scale(1.4) rotate(25deg);
+}
+.interest:hover::before, .interest:active::before,
+.interest:hover .info , .interest:active .info 
+{
+    opacity: 1;
+    transform:scale(1);
+}
+.cat{
+ 
+    margin: 0 auto;
+    align-items: center;
+   
+}
+h3 , .cat {
+    color:#353b48;
+}
+
+#owner {
+   
+    left: 0;
+    bottom: 0;
+    padding-bottom: 1%;
+    margin:0;
+    width: 100%;
+    background-color:transparent;
+    color:white;
+    text-align: center;
+    transition: .3s linear;
+}
+
+  
+  @media screen and (max-width: 900px){
+    .menu-toggler{
+      display: inline-block;
+  }
+  .interest{
+      width: calc(50% - 10px);
+  }
+    .navbar-menu{
+      position: fixed;
+      height: 100vh;
+      width: 80%;
+      background-color: white;
+      top: 0;
+      right: -100%;
+      max-width: 200px;
+      padding: 80px 30px;
+      transition: .3s linear;
+      
+    }
+  
+    .navbar-menu a{
+      color:#353b48;
+      display: block;
+      font-size: 30px;
+      margin: 30px 0;
+     
+    }
+    .navbar-menu.active{
+      right: 0;
+      overflow-y: scroll;
+    }
+    .menu-toggler.active span:nth-child(1){
+      transform: rotate(-45deg);
+      top: 4px;
+      background-color: #353b48;
+    }
+  
+    .menu-toggler.active span:nth-child(2){
+      opacity: 0;
+    }
+  
+    .menu-toggler.active span:nth-child(3){
+      transform: rotate(45deg);
+      bottom: 14px;
+      background-color: #353b48;
+    }
+    @media screen and (max-width: 700px) {
+      #cv {
+        display: block;
+        margin: auto;
+      }
+      .interest{
+          width: 100%;
+      }
+      
+    }
+  }
+  
+  
+  

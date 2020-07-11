@@ -1,0 +1,241 @@
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    font-family: "Ubuntu",sans-serif;
+    box-sizing: border-box;
+}
+
+.navbar{
+    position: fixed;
+    background-color: transparent;
+    width:100%;
+    padding: 30px 0;
+    z-index: 999;
+    transition: .3s linear;
+    top: 0%;
+}
+
+.inner-width {
+    max-width: 1300px ;
+    margin:auto;
+    padding: 0 30px;
+
+}
+
+.navbar .inner-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.logo{
+    width: 40px;
+    height: 30px;
+    background-image: url(../images/wh-logo.jpg);
+    background-size: contain;
+}
+
+.menu-toggler{
+    background: none;
+    width: 30px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    z-index: 999;
+    display: none;
+}
+
+.menu-toggler span {
+    display: block;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    position: relative;
+    transition: .3s linear;
+}
+
+.navbar-menu a{
+     
+    color :white;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 30px;
+    transition: .2s linear;
+}
+
+.navbar-menu a:hover{
+    color:#48dbfb;
+
+}
+
+#home{
+    height: 100vh;
+    min-height: 500px;
+    background: url(../images/bg.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+ 
+  
+  #home .content{
+    width: 100%;
+    color: #fff;
+  }
+  
+  #home .content h1{
+    font-size: 60px;
+    margin-bottom: 60px;
+   
+  }
+  
+  #home .content h1::after{
+    content: "Harsh";
+    animation: textanim 8s linear infinite;
+  }
+  
+  @keyframes textanim{
+  
+    70%{
+      content: "A Gamer";
+    }
+  }
+  
+  .sm a{
+    color: #fff;
+    font-size: 30px;
+    margin: 0 10px;
+    transition: .2s linear;
+  }
+  
+  .sm a:hover{
+    color: #48dbfb;
+  }
+  .sm a:active{
+    color: #48dbfb;
+  }
+  #home .buttons{
+    margin-top: 60px;
+  }
+  
+  #home .buttons a{
+    display: inline-block;
+    margin: 15px 30px;
+    color: #48dbfb;
+    font-size: 15px;
+    font-weight: 500;
+    width: 180px;
+    border: 1px solid #48dbfb;
+    padding: 14px 0;
+    border-radius: 6px;
+    transition: .2s linear;
+  }
+  
+  #home .buttons a:hover
+  {
+    background-color: #48dbfb;
+    color: #fff;
+  }
+  
+  #cv {
+    cursor: pointer;  
+    display: inline-block;
+    margin: 15px 30px;
+    font-size: 15px;
+    font-weight: 500;
+    width: 180px;
+    border: 1px solid #48dbfb;
+    padding: 14px 0;
+    border-radius: 6px;
+    transition: .2s linear;
+    background-color: #48dbfb;
+    color: #fff;
+
+  }
+  
+  #owner {
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding-bottom: 2%;
+    width: 100%;
+    background-blend-mode:color-burn ;
+    background-color:transparent;
+    color: white;
+    text-align: center;
+    transition: .3s linear;
+  
+    
+  }
+  
+  @media screen and (max-width: 900px){
+    .menu-toggler{
+      display: inline-block;
+  }
+  
+    .navbar-menu{
+      position: fixed;
+      height: 100vh;
+      width: 80%;
+      background-color: white;
+      top: 0;
+      right: -100%;
+      max-width: 200px;
+      padding: 80px 30px;
+      transition: .3s linear;
+      
+    }
+  
+    .navbar-menu a{
+      color :#353b48;
+      display: block;
+      font-size: 30px;
+      margin: 30px 0;
+     
+    }
+    .navbar-menu.active{
+      right: 0;
+      overflow-y: scroll;
+    }
+    .menu-toggler.active span:nth-child(1){
+      background-color:#353b48;
+      transform: rotate(-45deg);
+      top: 4px;
+    }
+  
+    .menu-toggler.active span:nth-child(2){
+      opacity: 0;
+    }
+  
+    .menu-toggler.active span:nth-child(3){
+      background-color:#353b48;
+      transform: rotate(45deg);
+      bottom: 14px;
+    }
+    @media screen and (max-width: 700px) {
+      #cv {
+        display: block;
+        margin: auto;
+      }
+      #home {
+        padding-top: 10%;
+      }
+      #home .content h1{
+        font-size: 40px;
+      }
+      .sm a{
+        font-size: 20px;
+        margin: 0 8px;
+      }
+    }
+  }
+  
+  
+  
