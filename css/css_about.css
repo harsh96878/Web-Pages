@@ -206,7 +206,9 @@ section{
 }
 
 @media screen and (max-width: 900px){
-  
+  .navbar {
+    padding : 20px 0;
+  }
   .menu-toggler{
     display: block;
   }
@@ -270,6 +272,9 @@ section{
 @media screen and (max-width: 600px){
   .inner-width{
     padding: 0 20px;
+  }
+  .navbar {
+    padding : 15px 0;
   }
 
   .skill{
